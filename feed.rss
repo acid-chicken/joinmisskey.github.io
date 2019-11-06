@@ -4,7 +4,7 @@
         <title>Misskeyをはじめよう</title>
         <link>https://join.misskey.page</link>
         <description>いつまでも進化する、洗練されたマイクロブログSNS Misskey（ミスキー）</description>
-        <lastBuildDate>Wed, 06 Nov 2019 06:45:52 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 Nov 2019 07:25:09 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© Misskey</copyright>
@@ -70,7 +70,7 @@
             <link>https://join.misskey.page/ja/blog/2019/06/06-new-wiki/?rel=rss</link>
             <guid>https://join.misskey.page/ja/blog/2019/06/06-new-wiki/?rel=rss</guid>
             <pubDate>Wed, 05 Jun 2019 22:00:00 GMT</pubDate>
-            <description><![CDATA[Misskey Wikiが開設されました。joinmisskeyのWikiはそちらに移転します。]]></description>
+            <description><![CDATA[Misskey Wikiが開設されました。]]></description>
             <enclosure url="https://join.misskey.page/files/images/imports/2019/03/misskey-rd-bg-bk.png"/>
         </item>
         <item>
