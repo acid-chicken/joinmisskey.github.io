@@ -1,4 +1,4 @@
-/* workbox 2019-11-11T04:55:32.069Z */
+/* workbox 2019-11-11T05:23:38.879Z */
 
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
@@ -14,7 +14,7 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-  /^https://cdn.jsdelivr.net/,
+  /^https:\/\/cdn\.jsdelivr\.net/,
   new workbox.strategies.CacheFirst({
     cacheName: 'jsdelivr',
     plugins: [
@@ -23,15 +23,15 @@ workbox.routing.registerRoute(
       }),
       new workbox.expiration.Plugin({
         maxAgeSeconds: 60 * 60 * 24 * 365,
-        maxEntries: 160,
-      }),
-    ],
+        maxEntries: 160
+      })
+    ]
   })
 );
 workbox.precaching.precacheAndRoute([
     {
         url: "/offline/",
-        revision: "1573448132069",
+        revision: "1573449818879",
     }
 ]);
 
