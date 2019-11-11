@@ -1,4 +1,4 @@
-/* workbox 2019-11-10T11:00:03.069Z */
+/* workbox 2019-11-11T04:55:32.069Z */
 
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
@@ -7,15 +7,31 @@ workbox.core.clientsClaim();
 workbox.googleAnalytics.initialize();
 
 workbox.routing.registerRoute(
-    /.*.(?:js|css|png|jpeg|jpg|svg|svgz|woff2)/,
+    /.*.(?:js|css|png|jpeg|jpg|svg|webp|svgz)/,
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: "assets-cache",
     })
 );
+
+workbox.routing.registerRoute(
+  /^https://cdn.jsdelivr.net/,
+  new workbox.strategies.CacheFirst({
+    cacheName: 'jsdelivr',
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200],
+      }),
+      new workbox.expiration.Plugin({
+        maxAgeSeconds: 60 * 60 * 24 * 365,
+        maxEntries: 160,
+      }),
+    ],
+  })
+);
 workbox.precaching.precacheAndRoute([
     {
         url: "/offline/",
-        revision: "1573383603069",
+        revision: "1573448132069",
     }
 ]);
 
